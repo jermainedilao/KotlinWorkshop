@@ -30,4 +30,9 @@ class CheeseAdapter(private val context: Context, private var cheeseArray: Array
     override fun getItemId(position: Int) = position.toLong()
 
     override fun getCount() = cheeseArray.size
+
+    fun updateItems(newCheeseArray: Array<String>) {
+        cheeseArray = newCheeseArray
+        notifyDataSetChanged()
+    }
 }

@@ -18,6 +18,18 @@ class MainActivityKt : AppCompatActivity() {
     }
 
     fun onButtonClick(view: View) {
+        val filter = editText.text.toString()
 
+        val cheeseArray = if (filter.isNotEmpty()) {
+            CheeseKt.LIST
+                    .filter {
+                        it.startsWith(filter, true)
+                    }
+                    .toTypedArray()
+        } else {
+            CheeseKt.LIST
+        }
+
+        adapter.updateItems(cheeseArray)
     }
 }
