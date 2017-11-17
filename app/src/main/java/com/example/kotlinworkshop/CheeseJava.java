@@ -3,7 +3,7 @@ package com.example.kotlinworkshop;
 
 public class CheeseJava {
 
-    public static final String[] LIST = {
+    public static final String[] ARRAY = {
             "Abbaye de Belloc", "Abbaye du Mont des Cats", "Abertam", "Abondance", "Ackawi",
             "Acorn", "Adelost", "Affidelice au Chablis", "Afuega'l Pitu", "Airag", "Airedale",
             "Aisy Cendre", "Allgauer Emmentaler", "Alverca", "Ambert", "American Cheese",
