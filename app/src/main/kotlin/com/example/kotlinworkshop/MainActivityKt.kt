@@ -15,6 +15,11 @@ class MainActivityKt : AppCompatActivity() {
 
         adapter = CheeseAdapter(this, CheeseKt.LIST)
         listView.adapter = adapter
+        listView.setOnItemClickListener { _, _, position, _ ->
+            val extras = Bundle()
+            extras.putString(SecondActivity.EXTRA_CHEESE, adapter.getItem(position))
+            startSecondActivity(extras)
+        }
     }
 
     fun onButtonClick(view: View) {
